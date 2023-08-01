@@ -101,6 +101,4 @@ public abstract class Properties {
             alfanumericCode = new String(code);
             return alfanumericCode;
         }
-
-
 }
