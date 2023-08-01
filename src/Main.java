@@ -67,5 +67,15 @@ public class Main {
         System.out.println("Inserisci un codice da cercare:");
         String userChoose = input.nextLine();
         listProperties.searchPropriertiesByCode(userChoose);
+        System.out.println("Cambia i mq a villa2");
+        int mq = Integer.parseInt(input.nextLine());
+        System.out.println("Cambia il valore degli mq del giardino");
+        int mqGarden = Integer.parseInt(input.nextLine());
+        villa2.reimpostMq(mq, mqGarden);
+        System.out.println(villa2);
+        System.out.println("Cambia i mq ad una prorietà");
+        int mq2 = Integer.parseInt(input.nextLine());
+        residence2.reimpostMq(mq2);
+        System.out.println(residence2);
     }
 }

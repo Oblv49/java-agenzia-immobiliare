@@ -12,7 +12,8 @@ public class Villa extends PrivateResidence{
             return mqGarden;
         }
         //set
-        public void setMqGarden(int mqGarden) {
+        public void reimpostMq(int mq, int mqGarden) {
+            this.reimpostMq(mq);
             this.mqGarden = mqGarden;
         }
 

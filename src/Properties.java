@@ -7,6 +7,7 @@
 *        una superficie espressa in mq attraverso un numero intero.
 *    Definire all’interno della classe Immobile un attributo per memorizzare il numero di persone interessate all’acquisto e aggiungere
 *    un metodo per incrementare questo numero.
+*    Definire nella classe Immobile il metodo reimpostaSuperfici che prende in input la nuova superficie.
 *    toString
 */
 
@@ -51,7 +52,7 @@ public abstract class Properties {
         public void setCity(String city) {
             this.city = city;
         }
-        public void setMq(int mq) {
+        public void reimpostMq(int mq) {
             this.mq = mq;
         }
 
@@ -83,6 +84,7 @@ public abstract class Properties {
         public void incrementNInterestedPeople() {
             nInterestedPeople++;
         }
+
 
 
     //methods private
