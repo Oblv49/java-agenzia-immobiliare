@@ -6,7 +6,38 @@
 */
 
 
+import java.util.ArrayList;
+
 public class EstateAgency {
     //variables
+    private ArrayList<Properties> propriertiesList = new ArrayList<>();
 
+    //constructor
+    public EstateAgency(ArrayList<Properties> propriertiesList) {
+        this.propriertiesList = propriertiesList;
+    }
+
+    //getter & setter
+        //get
+        public ArrayList<Properties> getPropriertiesList() {
+            return propriertiesList;
+        }
+        //set
+        public void setPropriertiesList(ArrayList<Properties> propriertiesList) {
+            this.propriertiesList = propriertiesList;
+        }
+    //toString
+
+    @Override
+    public String toString() {
+        return "EstateAgency: " +
+                "propriertiesList= " + propriertiesList +
+                '.';
+    }
+
+    //methods
+        //add proprierties to list
+        public void addProprierties(Properties proprierties) {
+            propriertiesList.add(proprierties);
+        }
 }
