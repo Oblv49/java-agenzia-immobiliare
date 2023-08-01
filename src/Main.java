@@ -28,6 +28,7 @@
 */
 
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
@@ -61,5 +62,10 @@ public class Main {
         System.out.println(listProperties.searchPropriertiesByCode("MS4VO2S"));
         System.out.println("Numero di views: " + villa1.getnInterestedPeople());
         System.out.println("Proprietà con più interesse: " + listProperties.mostInterestingProperty());
+        //test search by code
+        Scanner input = new Scanner(System.in);
+        System.out.println("Inserisci un codice da cercare:");
+        String userChoose = input.nextLine();
+        listProperties.searchPropriertiesByCode(userChoose);
     }
 }
