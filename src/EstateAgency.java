@@ -33,15 +33,19 @@ public class EstateAgency {
         public void addProprierties(Properties proprierties) {
             propertiesList.add(proprierties);
         }
-
+        //search by code
         public Properties searchPropriertiesByCode(String codeAlfanumeric) {
             for (Properties proprierties : propertiesList) {
                 if (proprierties.getAlfanumericCode().equals(codeAlfanumeric)) {
+                    System.out.println("Immobile trovato: " + proprierties.toString());
                     return proprierties;
                 }
             }
+            System.out.println("Il codice non è stato trovato.");
             return null;
         }
+        //the most views
+
 
     //toString
     @Override

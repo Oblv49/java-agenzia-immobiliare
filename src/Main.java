@@ -27,8 +27,37 @@
 *    Creare una classe Main con metodo main nel quale testare tutte le funzionalità delle classi
 */
 
+import java.util.ArrayList;
+
 public class Main {
     public static void main(String[] args) {
+        //variables
+        // Istanziamo 2 Box
+        Box box1 = new Box("Via Roma 1", 20121, "Milano", 20, 1);
+        Box box2 = new Box("Via Verdi 10", 10100, "Torino", 15, 2);
+        // Istanziamo 2 PrivateResidence
+        PrivateResidence residence1 = new PrivateResidence("Via dei Fiori 5", 50123, "Firenze", 120, 3, 2);
+        PrivateResidence residence2 = new PrivateResidence("Via delle Palme 20", 80100, "Napoli", 90, 2, 1);
+        // Istanziamo 2 Villa
+        Villa villa1 = new Villa("Via delle Rose 15", 40100, "Bologna", 200, 5, 3, 400);
+        Villa villa2 = new Villa("Via degli Ulivi 8", 30100, "Venezia", 180, 4, 2, 300);
 
+        //creation list
+        ArrayList<Properties> properties = new ArrayList<>();
+        EstateAgency listProperties = new EstateAgency(properties);
+        listProperties.addProprierties(box1);
+        listProperties.addProprierties(box2);
+        listProperties.addProprierties(villa1);
+        listProperties.addProprierties(villa2);
+        listProperties.addProprierties(residence1);
+        listProperties.addProprierties(residence2);
+
+        //test
+        System.out.println(box1);
+        System.out.println(residence1);
+        System.out.println(villa2);
+        System.out.println(listProperties.toString());
+        System.out.println(listProperties.searchPropriertiesByCode("MS4VO2S"));
+        System.out.println("Numero di views: " + villa1.getnInterestedPeople());
     }
 }

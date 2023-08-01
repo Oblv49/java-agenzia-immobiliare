@@ -56,8 +56,6 @@ public abstract class Properties {
         }
 
     //constructor
-
-
     public Properties(String address, int cap, String city, int mq) {
         this.alfanumericCode = alfanumericCode;
         this.address = address;

@@ -28,9 +28,9 @@ public class PrivateResidence extends Properties{
     @Override
     public String toString() {
         return super.toString() +
-                "PrivateResidence{" +
-                "nRoom=" + nRoom +
-                ", nBathrooms=" + nBathrooms +
-                '}';
+                " PrivateResidence: " +
+                "nRoom= " + nRoom +
+                ", nBathrooms= " + nBathrooms +
+                '.';
     }
 }

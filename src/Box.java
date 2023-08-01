@@ -26,8 +26,7 @@ public class Box extends Properties{
     @Override
     public String toString() {
         return super.toString() +
-                "Box{" +
-                "nParkingSpaces=" + nParkingSpaces +
-                '}';
+                " nParkingSpaces=" + nParkingSpaces +
+                '.';
     }
 }

@@ -27,8 +27,7 @@ public class Villa extends PrivateResidence{
     @Override
     public String toString() {
         return super.toString() +
-                "Villa{" +
-                "mqGarden=" + mqGarden +
-                '}';
+                "mqGarden= " + mqGarden +
+                '.';
     }
 }
