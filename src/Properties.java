@@ -70,7 +70,7 @@ public abstract class Properties {
     @Override
     public String toString() {
         return "Properties: " +
-                "alfanumericCode= '" + alfanumericCode + '\'' +
+                "Code= '" + alfanumericCode + '\'' +
                 ", address= '" + address + '\'' +
                 ", cap= " + cap +
                 ", city= '" + city + '\'' +

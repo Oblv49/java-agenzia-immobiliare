@@ -42,10 +42,9 @@ public class MainInteractive {
             System.out.println("1. Visualizzare tutta la lista di immobili.");
             System.out.println("2. Cerca un immobile tramite codice univoco.");
             System.out.println("3. Visualizza l'immobile con più interesse.");
-            System.out.println("4. Reimpostare superfice di un immobile.");
-            System.out.println("5. Dichiarare interesse per un immobile.");
-            System.out.println("6. Visualizza l'immobile con più interesse.");
-            System.out.println("7. Aggiungere un immobile alla lista.");
+            System.out.println("4. Dichiarare interesse per un immobile.");
+            System.out.println("5. Reimpostare superfice di un immobile.");
+            System.out.println("6. Aggiungere un immobile alla lista.");
             System.out.println("0. Uscire dal programma.");
             userChoose = input.nextLine();
             System.out.println("-------------------------------------");
@@ -75,6 +74,38 @@ public class MainInteractive {
                     listProperties.mostInterestingProperty();
                     break;
                 case "4":
+                    System.out.println("Quale Proprietà ti interessa?: ");
+                    System.out.println("-------------------------------------");
+                    int c = 1;
+                    for (Properties property : properties) {
+                        if (property instanceof Villa) {
+                            System.out.println(c + ". " + "La proprietà è una Villa.");
+                            System.out.println(property);
+                            c++;
+                        } else if (property instanceof PrivateResidence){
+                            System.out.println(c + ". " + "La proprietà è un Appartamento.");
+                            System.out.println(property);
+                            c++;
+                        } else if (property instanceof Box) {
+                            System.out.println(c + ". " + "La proprietà è un Box");
+                            System.out.println(property);
+                            c++;
+                        }
+                    }
+                    System.out.println(" ");
+                    System.out.println("Inserisci il numero della proprietà scelta: ");
+                    userChoose = input.nextLine();
+                    if (Integer.parseInt(userChoose) >= 1 && Integer.parseInt(userChoose)<= properties.size()) {
+                        Properties selectedProperty = properties.get(Integer.parseInt(userChoose) - 1);
+                        selectedProperty.incrementNInterestedPeople();
+                        System.out.println("-------------------------------------");
+                        System.out.println("Grazie per aver manifestato interesse per la proprietà:");
+                        System.out.println(selectedProperty);
+                    } else {
+                        System.out.println("Indice non valido. Riprova.");
+                    }
+                    break;
+                case "5":
                     System.out.println("Scegli la proprietà da aggiornare: ");
                     System.out.println("-------------------------------------");
                     int i = 1;
@@ -122,43 +153,13 @@ public class MainInteractive {
                         System.out.println("Indice non valido. Riprova.");
                     }
                     break;
-                case "5":
-                    System.out.println("Quale Proprietà ti interessa?: ");
-                    System.out.println("-------------------------------------");
-                    int c = 1;
-                    for (Properties property : properties) {
-                        if (property instanceof Villa) {
-                            System.out.println(c + ". " + "La proprietà è una Villa.");
-                            System.out.println(property);
-                            c++;
-                        } else if (property instanceof PrivateResidence){
-                            System.out.println(c + ". " + "La proprietà è un Appartamento.");
-                            System.out.println(property);
-                            c++;
-                        } else if (property instanceof Box) {
-                            System.out.println(c + ". " + "La proprietà è un Box");
-                            System.out.println(property);
-                            c++;
-                        }
-                    }
-                    System.out.println(" ");
-                    System.out.println("Inserisci il numero della proprietà scelta: ");
-                    userChoose = input.nextLine();
-                    if (Integer.parseInt(userChoose) >= 1 && Integer.parseInt(userChoose)<= properties.size()) {
-                        Properties selectedProperty = properties.get(Integer.parseInt(userChoose) - 1);
-                            selectedProperty.incrementNInterestedPeople();
-                            System.out.println("-------------------------------------");
-                            System.out.println("Grazie per aver manifestato interesse per la proprietà:");
-                            System.out.println(selectedProperty);
-                    } else {
-                        System.out.println("Indice non valido. Riprova.");
-                    }
-                    break;
                 case "6":
-                    System.out.println("La proprietà con più interesse è: " + listProperties.mostInterestingProperty());
-                    break;
-                case "7":
-
+                    System.out.println("Scegli se inserire un Appartamento una Villa o Box.");
+                    System.out.println("-------------------------------------");
+                    System.out.println("1. Appartamento");
+                    System.out.println("2. Villa");
+                    System.out.println("3. Box");
+                    userChoose = input.nextLine();
             }
 
         } while (!userChoose.equals("0"));
