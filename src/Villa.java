@@ -23,7 +23,6 @@ public class Villa extends PrivateResidence{
     }
 
     //tostring
-
     @Override
     public String toString() {
         return super.toString() +

@@ -16,6 +16,7 @@ public class Box extends Properties{
         public void setnParkingSpaces(int nParkingSpaces) {
             this.nParkingSpaces = nParkingSpaces;
         }
+
     //constructor
     public Box(String address, int cap, String city, int mq, int nParkingSpaces) {
         super(address, cap, city, mq);

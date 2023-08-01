@@ -56,8 +56,10 @@ public class Main {
         System.out.println(box1);
         System.out.println(residence1);
         System.out.println(villa2);
+        villa2.incrementNInterestedPeople();
         System.out.println(listProperties.toString());
         System.out.println(listProperties.searchPropriertiesByCode("MS4VO2S"));
         System.out.println("Numero di views: " + villa1.getnInterestedPeople());
+        System.out.println("Proprietà con più interesse: " + listProperties.mostInterestingProperty());
     }
 }

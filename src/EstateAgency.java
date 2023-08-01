@@ -44,8 +44,20 @@ public class EstateAgency {
             System.out.println("Il codice non è stato trovato.");
             return null;
         }
-        //the most views
 
+        //the most views
+        public String mostInterestingProperty() {
+            int maxInterestedPeople = propertiesList.get(0).getnInterestedPeople();
+            int maxIndex = 0;
+            for (int i = 1; i < propertiesList.size(); i++) {
+                int currentInterestedPeople = propertiesList.get(i).getnInterestedPeople();
+                if (currentInterestedPeople > maxInterestedPeople) {
+                    maxInterestedPeople = currentInterestedPeople;
+                    maxIndex = i;
+                }
+            }
+            return propertiesList.get(maxIndex).toString();
+        }
 
     //toString
     @Override
