@@ -10,34 +10,45 @@ import java.util.ArrayList;
 
 public class EstateAgency {
     //variables
-    private ArrayList<Properties> propriertiesList = new ArrayList<>();
+    private ArrayList<Properties> propertiesList = new ArrayList<>();
 
     //constructor
     public EstateAgency(ArrayList<Properties> propriertiesList) {
-        this.propriertiesList = propriertiesList;
+        this.propertiesList = propriertiesList;
     }
 
     //getter & setter
         //get
         public ArrayList<Properties> getPropriertiesList() {
-            return propriertiesList;
+            return propertiesList;
         }
         //set
         public void setPropriertiesList(ArrayList<Properties> propriertiesList) {
-            this.propriertiesList = propriertiesList;
+            this.propertiesList = propriertiesList;
         }
-    //toString
 
-    @Override
-    public String toString() {
-        return "EstateAgency: " +
-                "propriertiesList= " + propriertiesList +
-                '.';
-    }
 
     //methods
         //add proprierties to list
         public void addProprierties(Properties proprierties) {
-            propriertiesList.add(proprierties);
+            propertiesList.add(proprierties);
         }
+
+        public Properties searchPropriertiesByCode(String codeAlfanumeric) {
+            for (Properties proprierties : propertiesList) {
+                if (proprierties.getAlfanumericCode().equals(codeAlfanumeric)) {
+                    return proprierties;
+                }
+            }
+            return null;
+        }
+
+    //toString
+    @Override
+    public String toString() {
+        return "EstateAgency: " +
+                "propriertiesList= " + propertiesList +
+                '.';
+    }
+
 }

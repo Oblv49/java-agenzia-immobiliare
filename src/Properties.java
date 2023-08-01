@@ -86,6 +86,7 @@ public abstract class Properties {
             nInterestedPeople++;
         }
 
+
     //methods private
         //creation unique code
         public String generateAlfanumericCode() {
