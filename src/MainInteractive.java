@@ -71,7 +71,7 @@ public class MainInteractive {
                     System.out.println("-------------------------------------");
                     break;
                 case "3":
-                    listProperties.mostInterestingProperty();
+                    System.out.println("Immobile che ha ricevuto più interesse: " + listProperties.mostInterestingProperty());
                     break;
                 case "4":
                     System.out.println("Quale Proprietà ti interessa?: ");
@@ -165,9 +165,9 @@ public class MainInteractive {
         } while (!userChoose.equals("0"));
 
         System.out.println("Programma in chiusura..");
-        System.out.println(" ");
-        System.out.println(" ");
-        System.out.println(" ");
+        System.out.println("...");
+        System.out.println("...");
+        System.out.println("...");
         System.out.println("Arrivederci e a Presto!");
     }
 }
