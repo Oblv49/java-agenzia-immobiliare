@@ -73,9 +73,10 @@ public class Main {
         int mqGarden = Integer.parseInt(input.nextLine());
         villa2.reimpostMq(mq, mqGarden);
         System.out.println(villa2);
-        System.out.println("Cambia i mq ad una prorietà");
+        /*System.out.println("Cambia i mq ad una prorietà");
         int mq2 = Integer.parseInt(input.nextLine());
         residence2.reimpostMq(mq2);
-        System.out.println(residence2);
+        System.out.println(residence2);*/
+        listProperties.mostInterestingProperty();
     }
 }
